@@ -13,7 +13,8 @@ class PostsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Посты')),
+      appBar: AppBar(title: const Text('Посты'),
+          shadowColor: Theme.of(context).colorScheme.shadow),
 
       body: BlocProvider(
         create: (_) => PostBloc(apiClient: ApiClient(Dio()))..add(PostFetched()),

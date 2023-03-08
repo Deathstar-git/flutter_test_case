@@ -9,8 +9,14 @@ class PostListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-    return Material(
+    return Container(
+        margin: const EdgeInsets.only(top:5, bottom:5, right:20, left:0),
+        decoration: BoxDecoration(
+            border: Border.all(
+              color:Colors.grey.shade300
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(20))
+        ),
       child: GestureDetector (
         onTap: () { Navigator.push(
           context,
@@ -25,7 +31,8 @@ class PostListItem extends StatelessWidget {
         );
           },
         child: ListTile(
-          leading: Text('${post.id}', style: textTheme.bodySmall),
+
+          leading: Text('${post.id}'),
           title: Text(post.title),
           isThreeLine: true,
           subtitle: Text(post.body),

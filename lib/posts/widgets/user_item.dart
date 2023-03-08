@@ -8,16 +8,19 @@ class UserItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
     return Material(
-            child: ListTile(
-              title: Text(user.name),
-              isThreeLine: true,
-              subtitle: Text(user.email),
-              dense: true,
-            )
-
+        child: Container(
+          color:Colors.grey.shade200,
+        child: ListTile(
+      leading: const Text('Автор:', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+      title: Text(user.name),
+      isThreeLine: false,
+      subtitle: Text(user.email),
+      dense: false,
+    ))
 
     );
+
+
   }
 }

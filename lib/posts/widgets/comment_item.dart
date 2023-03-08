@@ -8,14 +8,24 @@ class CommentItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
     return Material(
-        child: ListTile(
-          leading: Text(comment.email),
-          title: Text(comment.name),
-          isThreeLine: true,
-          subtitle: Text(comment.body),
-          dense: true,
+        child: Column (
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text('Автор:${comment.email}', style: TextStyle(fontSize: 12,
+              fontWeight: FontWeight.bold,
+              color:Colors.grey.shade300,
+              ),
+            textAlign: TextAlign.left,
+            ),
+            ListTile(
+
+            tileColor: Colors.grey.shade50,
+            title: Text(comment.name),
+            isThreeLine: false,
+            subtitle: Text(comment.body),
+            dense: true,
+          )]
         )
 
 

@@ -58,27 +58,4 @@ class PostBloc extends Bloc<PostEvent, PostState> {
       emit(state.copyWith(status: PostStatus.failure));
     }
   }
-
-  // Future<List<Post>> _fetchPosts([int startIndex = 0]) async {
-  //   final response = await httpClient.get(
-  //     Uri.https(
-  //       'jsonplaceholder.typicode.com',
-  //       '/posts',
-  //       <String, String>{'_start': '$startIndex', '_limit': '$_postLimit'},
-  //     ),
-  //   );
-  //   if (response.statusCode == 200) {
-  //     final body = json.decode(response.body) as List;
-  //     return body.map((dynamic json) {
-  //       final map = json as Map<String, dynamic>;
-  //       return Post(
-  //         userId: map['userId'] as int,
-  //         id: map['id'] as int,
-  //         title: map['title'] as String,
-  //         body: map['body'] as String,
-  //       );
-  //     }).toList();
-  //   }
-  //   throw Exception('error fetching posts');
-  // }
 }

@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 
 class SimpleBlocObserver extends BlocObserver {
-  const SimpleBlocObserver();
+  SimpleBlocObserver();
 
   @override
   void onTransition(
